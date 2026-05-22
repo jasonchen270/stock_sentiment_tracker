@@ -1,0 +1,34 @@
+# --- Secrets / environment ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python (backend) ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+instance/
+*.sqlite3
+*.db
+
+# --- Node / Vite + React (frontend) ---
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Editor / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp

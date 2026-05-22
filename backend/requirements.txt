@@ -1,0 +1,11 @@
+Flask
+Flask-SQLAlchemy
+Flask-CORS
+Flask-Caching
+Flask-APScheduler
+python-dotenv
+aiohttp
+beautifulsoup4
+selenium
+nltk
+mysqlclient
