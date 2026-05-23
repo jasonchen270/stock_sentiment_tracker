@@ -15,9 +15,9 @@ any ticker to see its sentiment and price trends.
 
 ## Prerequisites
 
-- Node and npm
-- Python 3
-- MySQL
+- Node 20+ and npm 10+
+- Python 3.11+
+- MySQL 8+
 
 ## Installation
 
