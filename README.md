@@ -7,21 +7,6 @@ any ticker to see its sentiment and price trends.
 
 ![home](https://github.com/jasonchen270/stock_sentiment_tracker/blob/main/screenshots/home.png?raw=true)
 
-## Problem and Motivation
-
-Stock prices are influenced by public sentiment, but manually reading through
-dozens of news articles per ticker every day is impractical. Retail investors
-lack a quick way to gauge market sentiment for the stocks they care about without
-paying for expensive data feeds.
-
-## How It Works
-
-1. **Scraping**: Selenium loads Yahoo Finance news pages (and Google News as a fallback) for each ticker, scrolling to load dynamic content. BeautifulSoup parses the rendered HTML to extract headline text and publish timestamps.
-2. **Sentiment analysis**: Each headline is scored using NLTK VADER's compound metric (range -1 to +1). All scores for a given ticker and date are averaged into a single daily sentiment score.
-3. **Storage**: Daily scores are POSTed to the Flask API and persisted in MySQL via SQLAlchemy. Duplicate entries for the same ticker/date are rejected unless the existing score is zero (placeholder), in which case it is updated.
-4. **Scheduling**: APScheduler runs the top-5 scraper as a cron job at midnight daily, keeping the database current without manual intervention.
-5. **Display**: The React frontend fetches sentiment data and top-5 tickers from the API, then renders bar charts (top 5) and line charts (individual search) using Recharts.
-
 ## Built With
 
 - **Frontend**: React, Vite, Styled Components, Recharts
