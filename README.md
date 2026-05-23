@@ -1,17 +1,6 @@
 # Stock Sentiment Tracker
 
-A full-stack web app that scrapes financial news, scores daily sentiment with
-NLTK VADER, and charts it against stock price history. The home page shows a
-7-day sentiment bar chart for the top 5 stocks by market cap, and you can search
-any ticker to see its sentiment and price trends.
-
-![home](https://github.com/jasonchen270/stock_sentiment_tracker/blob/main/screenshots/home.png?raw=true)
-
-## Built With
-
-- **Frontend**: React, Vite, Styled Components, Recharts
-- **Backend**: Flask, Selenium, BeautifulSoup, NLTK VADER, APScheduler
-- **Database**: MySQL
+A full-stack web app (React + Vite frontend, Flask backend with Selenium/BeautifulSoup scraping and NLTK VADER scoring, MySQL) that scrapes financial news, scores daily sentiment, and charts it against stock price history. The home page shows a 7-day sentiment bar chart for the top 5 stocks by market cap, and you can search any ticker to see its sentiment and price trends.
 
 ## Prerequisites
 
